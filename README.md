@@ -68,28 +68,11 @@ PYTHONPATH=. python3 -m pytest tests/ -q
 
 无 Key 时联网集成测试会自动 skip，只有纯离线单测会运行。
 
-## 实测 API 陷阱（本项目最有价值的部分）
-
-V1 API 文档没写、实测踩出来的 12 条（详见 `AGENTS.md`），摘 3 条：
-
-1. `report/events` 带 `sourceid` 时 `type`/`abilityid` 过滤会被**忽略**——只请求一次，本地按 `sourceID/guid/type` 过滤。
-2. V1 events 不返回 `crit` 字段——暴击看 `hitType`（1=命中，2=暴击），否则暴击率恒为 0。
-3. `event` 表 `type='cast'` 行混有 DoT tick——**施法次数只信 `tables/casts`**，event 流只取时间点。
-
 ## 方法局限
 
 - V1 table 端点无逐次 cast/damage/resource 事件；`aura` 是队伍级别；`player/npc` 为聚合数据。
 - `rank`/`percentile` 仅供参考（实测存在语义矛盾），报告中需加免责说明。
 - 对标榜样存在选择偏差（层数/队伍拉怪/装等差异），结论区分“客观因素 vs 个人可改”。
-
-## 命名对照（历史原因，拼音模块保留）
-
-| 模块/档案 | 含义 |
-|---|---|
-| `xiaoxue_*` / profile `example(dps·冰法)` | 冰法 DPS 教练管线 |
-| `meishu_*` / profile `example(tank·酒仙)` | 酒仙坦克教练管线 |
-| `taozhi` / profile `example(healer·织雾)` | 织雾治疗教练管线 |
-| `mplus_pipeline.py --mode team` | 全队混合分析 |
 
 ## 报告示例
 
