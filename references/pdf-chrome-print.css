@@ -1,0 +1,70 @@
+@page {
+  size: A4;
+  margin: 15mm 20mm;
+}
+body {
+  font-family: "HarmonyOS Sans SC", "HarmonyOS Sans", "Noto Sans SC",
+    "Noto Sans", "WenQuanYi Zen Hei", "Noto Color Emoji", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 16pt;
+  font-weight: 600;
+  border-bottom: 1.5px solid #d0d7de;
+  padding-bottom: 3pt;
+  margin: 0 0 4pt;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 2pt;
+  margin: 8pt 0 4pt;
+}
+h3 { font-size: 11pt; font-weight: 600; margin: 6pt 0 3pt; }
+p { margin: 2pt 0; }
+strong { font-weight: 600; }
+
+blockquote {
+  border-left: none;
+  padding: 0;
+  margin: 0 0 4pt;
+  color: #555;
+  font-size: 9.5pt;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3pt 0;
+  font-size: 8.5pt;
+}
+th, td {
+  border: 1px solid #d0d7de;
+  padding: 2pt 5pt;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+th {
+  background: #f6f8fa;
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: #f6f8fa; }
+
+code {
+  background: #f6f8fa;
+  padding: 1pt 3pt;
+  font-family: "Noto Sans Mono", Consolas, monospace;
+  font-size: 8pt;
+}
+pre { background: #f6f8fa; padding: 6pt 8pt; white-space: pre-wrap; font-size: 8pt; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #d0d7de; margin: 6pt 0; }
+ul, ol { padding-left: 1.5em; margin: 1pt 0; }
+li { margin: 1pt 0; }

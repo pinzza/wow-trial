@@ -1,0 +1,9 @@
+# 运行时依赖（与代码 import 保持一致）
+requests>=2.31.0
+pyyaml>=6.0
+pydantic>=2.0.0
+httpx>=0.25.0
+
+# PDF 管线走 Node（marked + puppeteer-core），见 package.json
+# 测试
+pytest>=8.0

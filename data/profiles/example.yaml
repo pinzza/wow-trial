@@ -1,0 +1,40 @@
+# 示例档案（虚构人物，可公开）。真人档案一律放本地，不进仓。
+#
+# 用法：
+#   cp data/profiles/example.yaml data/profiles/mine.yaml
+#   按注释改成你自己的角色/对标，再跑：
+#   WCL_API_KEY=<key> PYTHONPATH=. python3 core/mplus_pipeline.py \
+#     --profile mine --report-code <CODE> --fight-id <N>
+
+profile:
+  id: example
+  name: 示例法师
+  server: 示例服务器
+scenario: mplus
+role: dps            # dps | healer | tank
+spec: 冰法
+hero_talent: 疾咒师
+build: 射线流
+function: coaching
+comparison: benchmark
+benchmark:
+  character: 示例榜样
+  server: 示例服务器
+  role: dps
+  spec: 冰法
+  default_report: <BENCHMARK_REPORT_CODE>
+  default_fight: 1
+  dungeon_reports: {}
+knowledge:
+  wiki_prefix: example
+  bilibili:
+    name: 示例UP主
+    uid: 0
+  card_count: 0
+progress:
+  db: data/cache/example_progress.db
+  tracker_module: xiaoxue_tracker
+persona:
+  style: example
+  greeting: 示例法师
+  sign_off: 教练

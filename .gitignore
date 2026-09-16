@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------------------
+# 运行环境（可再生 / 与本机绑定，不进公共提交）
+# ---------------------------------------------------------------------------
+venv/
+node_modules/
+models/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+
+# ---------------------------------------------------------------------------
+# 凭证与本地配置（绝不进仓）
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# 数据与产物（体积大、可重新从 WCL 拉取；且可能含真人 ID）
+#   随仓的只有：mappings / profiles/example.yaml / templates / samples
+# ---------------------------------------------------------------------------
+data/*
+!data/mappings/
+!data/mappings/**
+!data/templates/
+!data/templates/**
+!data/profiles/
+!data/profiles/example.yaml
+!data/profiles/README.md
+!data/samples/
+!data/samples/**
+data/profiles/*
+!data/profiles/example.yaml
+!data/profiles/README.md
+wcl_db/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# 报告与渲染产物（本地生成）
+*.pdf
+*.html
+*.png
+data/reports/
+data/cache/
+data/comparisons/
+
+# 历史归档与调试产物
+_archive/
+debug/
+scripts/debug/
+tmp/
+
+# ---------------------------------------------------------------------------
+# 工具状态（个人环境）
+# ---------------------------------------------------------------------------
+.claude/
+.worktrees/
+.dsh/
+*.code-workspace
+.DS_Store
